@@ -22,3 +22,8 @@ python setup.py install
 一定要看，但是下面的👇博客的前半部分写的不完全对，要接着我上述的看，余下看博客。
 
 余下写在这个博客里：https://www.jianshu.com/p/fa7944bdcc1b
+
+## 2019.7.17
+在各个app文件夹中，增加adminx.py文件，在其中写models的注册。注意，和admin中是不一样的（继承上）。
+
+models中的verbose_name，在后台显示出来了。
