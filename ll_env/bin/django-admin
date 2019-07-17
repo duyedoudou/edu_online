@@ -1,10 +1,12 @@
 #!/Users/mac/Documents/GitHub/edu_online/ll_env/bin/python
-# -*- coding: utf-8 -*-
+# EASY-INSTALL-ENTRY-SCRIPT: 'Django==2.2.3','console_scripts','django-admin'
+__requires__ = 'Django==2.2.3'
 import re
 import sys
-
-from django.core.management import execute_from_command_line
+from pkg_resources import load_entry_point
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
-    sys.exit(execute_from_command_line())
+    sys.exit(
+        load_entry_point('Django==2.2.3', 'console_scripts', 'django-admin')()
+    )

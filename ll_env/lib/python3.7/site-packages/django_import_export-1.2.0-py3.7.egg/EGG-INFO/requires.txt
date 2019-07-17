@@ -1,0 +1,3 @@
+diff-match-patch
+django>=1.8
+tablib

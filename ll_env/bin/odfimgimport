@@ -1,0 +1,4 @@
+#!/Users/mac/Documents/GitHub/edu_online/ll_env/bin/python
+# EASY-INSTALL-SCRIPT: 'odfpy==1.4.0','odfimgimport'
+__requires__ = 'odfpy==1.4.0'
+__import__('pkg_resources').run_script('odfpy==1.4.0', 'odfimgimport')
