@@ -27,3 +27,10 @@ python setup.py install
 在各个app文件夹中，增加adminx.py文件，在其中写models的注册。注意，和admin中是不一样的（继承上）。
 
 models中的verbose_name，在后台显示出来了。
+
+## 2019.7.17 晚
+在users/adminx.py文件中增加两个类，功能是使后台增加切换主题功能、更改后台页面的title和footer。
+
+修改各个app的apps.py和__init__.py文件，_init__.py文件增加default_app_config；apps.py文件增加verbose_name 
+
+使各个app能够在后台显示中文。具体可查看源码。
