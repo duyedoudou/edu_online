@@ -54,3 +54,8 @@ models中的verbose_name，在后台显示出来了。
 
 在user/views.py文件中，增加类CustomBackend，重写authenticate函数的功能，其中引入大Q方法，用来实现‘或’的功能。
 
+4)增加form类文件，form的主要功能是，举个例子：在用户登录时，用户名和密码如果为空，或者长度不满足，就会被form的实例拦截，不会在传递给authenticate函数。
+
+这样实现了与处理的功能。
+
+通过逻辑判断，传不同的字典给前端html，对不同的错误类型返回不同的提示信息。
