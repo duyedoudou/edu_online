@@ -45,4 +45,8 @@ models中的verbose_name，在后台显示出来了。
 一直报语法错误，误以为不能两个TemplateView.as_view一起用，实则是上一个path的最后没有加’逗号’。
 
 
+错误记录：登录页面点击提交后，跳转到/login/login.html地址。原因：login.html文件中，<form那一行，action=的位置没有修改，应该是当前地址
+
+.和/login/都行。
+
 
