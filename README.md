@@ -59,3 +59,12 @@ models中的verbose_name，在后台显示出来了。
 这样实现了与处理的功能。
 
 通过逻辑判断，传不同的字典给前端html，对不同的错误类型返回不同的提示信息。
+
+5)使用静态文件：{% load staticfiles %}这样就能使用相对路径了，举例：href={% static 'css/reset.css' %}
+
+6）注册时，使用验证码：安装django-simple-captcha。github地址：https://github.com/mbi/django-simple-captcha
+
+说明文档地址：https://django-simple-captcha.readthedocs.io/en/latest/usage.html#installation
+
+
+
