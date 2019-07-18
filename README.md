@@ -34,3 +34,12 @@ models中的verbose_name，在后台显示出来了。
 修改各个app的apps.py和__init__.py文件，_init__.py文件增加default_app_config；apps.py文件增加verbose_name 
 
 使各个app能够在后台显示中文。具体可查看源码。
+
+## 2019.7.18
+错误信息记录：urls.py文件中，
+    path('', TemplateView.as_view(template_name='index.html'), name='index')
+    path('login/', TemplateView.as_view(template_name='login.html'), name='login'),
+一直报语法错误，误以为不能两个TemplateView.as_view一起用，实则是上一个path的最后没有加’逗号’。
+
+
+
