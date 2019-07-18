@@ -36,7 +36,7 @@ models中的verbose_name，在后台显示出来了。
 使各个app能够在后台显示中文。具体可查看源码。
 
 ## 2019.7.18
-错误信息记录：urls.py文件中，
+1)错误信息记录：urls.py文件中，
 
     path('', TemplateView.as_view(template_name='index.html'), name='index')
     
@@ -44,9 +44,13 @@ models中的verbose_name，在后台显示出来了。
     
 一直报语法错误，误以为不能两个TemplateView.as_view一起用，实则是上一个path的最后没有加’逗号’。
 
-
-错误记录：登录页面点击提交后，跳转到/login/login.html地址。原因：login.html文件中，<form那一行，action=的位置没有修改，应该是当前地址
+2)错误记录：登录页面点击提交后，跳转到/login/login.html地址。原因：login.html文件中，<form那一行，action=的位置没有修改，应该是当前地址
 
 .和/login/都行。
 
+3)实现使用用户名或者邮箱都能登录。
+
+在setting.py文件中增加AUTHENTICATION_BACKENDS字段。功能：重定向authenticate函数。
+
+在user/views.py文件中，增加类CustomBackend，重写authenticate函数的功能，其中引入大Q方法，用来实现‘或’的功能。
 
