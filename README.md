@@ -37,8 +37,11 @@ models中的verbose_name，在后台显示出来了。
 
 ## 2019.7.18
 错误信息记录：urls.py文件中，
+
     path('', TemplateView.as_view(template_name='index.html'), name='index')
+    
     path('login/', TemplateView.as_view(template_name='login.html'), name='login'),
+    
 一直报语法错误，误以为不能两个TemplateView.as_view一起用，实则是上一个path的最后没有加’逗号’。
 
 
